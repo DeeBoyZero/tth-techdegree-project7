@@ -22,6 +22,9 @@ class SearchForm extends Component {
     e.preventDefault();
     e.currentTarget.reset();
     this.props.history.push(`/search/${this.state.searchQuery}`);
+    this.setState({
+      searchQuery: ""
+    });
   };
 
   render() {

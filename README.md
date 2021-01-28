@@ -18,3 +18,5 @@
 - Include a PageNotFound component for 404-like error.
 - Added a loading indicator when data is being fetched.
 - Added a no match found message on the search form.
+- Added a Home component with a logo.
+- Changed the font for 'Averia Serif Libre' (Google Fonts)

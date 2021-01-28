@@ -7,7 +7,7 @@ const Nav = (props) => {
       <ul>
         <li><NavLink to="/search/cats">Cats</NavLink></li>
         <li><NavLink to="/search/dogs">Dogs</NavLink></li>
-        <li><NavLink to="/search/stars">Stars</NavLink></li>
+        <li><NavLink to="/search/mountains">Mountains</NavLink></li>
       </ul>
     </nav>
   );
