@@ -21,9 +21,9 @@ a {
   text-decoration: none;
 }
 
+/*  Home Component CSS */
 .home {
   margin: 35px auto;
-  width: 35%;
   display: flex;
   justify-content: space-around;
   align-items: center;

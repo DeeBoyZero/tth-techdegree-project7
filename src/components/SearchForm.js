@@ -1,32 +1,39 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class SearchForm extends Component {
-
+  // Initial state
   constructor() {
-    super()
+    super();
     this.state = {
-      searchQuery: ''
-    }
+      searchQuery: "",
+    };
   }
 
-  onSearchChange = e => {
+  // Change the state when the input field detects change
+  onSearchChange = (e) => {
     this.setState({ searchQuery: e.target.value });
-  }
-  
-  handleSubmit = e => {
+  };
+
+  // Function to handle the submit handler of the search form. Add the new page to the History and redirects.
+  handleSubmit = (e) => {
     e.preventDefault();
     e.currentTarget.reset();
     this.props.history.push(`/search/${this.state.searchQuery}`);
-  }
-  
+  };
+
   render() {
     return (
       <>
         <form action="" className="search-form" onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Search..." ref={(input) => this.query = input} onChange={this.onSearchChange} />
+          <input
+            type="text"
+            placeholder="Search..."
+            ref={(input) => (this.query = input)}
+            onChange={this.onSearchChange}
+          />
           <button>
             <FontAwesomeIcon icon={faSearch} size="lg" />
           </button>
@@ -36,4 +43,4 @@ class SearchForm extends Component {
   }
 }
 
-export default withRouter(SearchForm)
+export default withRouter(SearchForm);
