@@ -7,9 +7,11 @@ import PageNotFound from "./components/PageNotFound";
 import Home from "./components/Home";
 import FetchData from "./components/FetchData";
 // Import the api key from config file
-import apiKey from "./config";
+// import apiKey from "./config";
 
 function App() {
+  const apiKey = process.env.REACT_APP_API_KEY;
+
   return (
     <BrowserRouter>
       <div className="container">

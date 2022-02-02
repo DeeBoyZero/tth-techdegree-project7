@@ -1,2 +1,0 @@
-# tth-techdegree-project7
- 
